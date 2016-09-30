@@ -1,0 +1,14 @@
+{
+  "name": "weathernode",
+  "version": "1.0.0",
+  "description": "A small API consuming program",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
