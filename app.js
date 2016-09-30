@@ -9,9 +9,20 @@ app.get('/', function (req, res) {
 
 app.listen(3000, function () {
   console.log('WeatherNode listening on port 3000!');
-  api.get(function(err, result) {
-    console.log(result)
-  })//.on(err, function (e) {
-    //console.log(e);
-  //});
+
+  function consumeapi(callback){
+    api.get(function(err, result) {
+      console.log(result)
+      callback();
+    });
+  }
+
+  function consumepoll(){
+    setTimeout(function(){
+      consumeapi(consumepoll);
+    }, 15000);
+  }
+
+  consumeapi(consumepoll);
+
 });
