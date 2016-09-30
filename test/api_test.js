@@ -32,19 +32,3 @@ describe('GET from API', function() {
   });
 
 });
-
-describe('POST to dataset', function() {
-  it('should send post params in request body', function() {
-	var params = { foo: 'bar' };
-	var expected = JSON.stringify(params);
-
-	var request = new PassThrough();
-	var write = sinon.spy(request, 'write');
- 
-	this.request.returns(request);
-
-	api.post(params, function() { });
-
-	assert(write.withArgs(expected).calledOnce);
-});
-});
