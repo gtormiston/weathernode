@@ -2,13 +2,20 @@
   "name": "weathernode",
   "version": "1.0.0",
   "description": "A small API consuming program",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "test"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0"
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "request": "^2.75.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.0",
+    "supertest": "^2.0.0"
   }
 }
