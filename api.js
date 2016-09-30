@@ -20,7 +20,7 @@ module.exports = {
   post: function(data, callback) {
     var req = http.request({
       // Send to Geckoboard dataset
-      hostname: '',
+      hostname: 'localhost:9000',
       path: '/',
       method: 'POST'
     }, function(response) {
