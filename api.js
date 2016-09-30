@@ -15,27 +15,5 @@ module.exports = {
       });
     });
     req.end();
-  },
-
-  post: function(data, callback) {
-    var req = http.request({
-      // Send to Geckoboard dataset
-      hostname: 'localhost:9000',
-      path: '/',
-      method: 'POST'
-    }, function(response) {
-      var data = '';
-      response.on('data', function(chunk) {
-        data += chunk;
-      });
-
-      response.on('end', function() {
-        callback(null, JSON.parse(data));
-      });
-    });
-
-    req.write(JSON.stringify(data));
-
-    req.end();
   }
 };
